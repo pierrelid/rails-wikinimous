@@ -1,0 +1,10 @@
+<div class="container" style="margin-top:2em;">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <% @articles.each do |article| %>
+      <h2><%= link_to article.title, article_path(article) %> <%= link_to "delete", article_path(article), method: 'delete' %>  <%= link_to "edit", edit_article_path(article) %>    </h2>
+      <p><%= article.content %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
